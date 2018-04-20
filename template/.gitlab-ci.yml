@@ -1,0 +1,10 @@
+image: node:7.7.0
+
+build:
+  stage: build
+  script:
+    - npm install -g firebase-tools
+    - npm install
+    - npm run build
+    - firebase use --token $firebaseCI
+    - firebase deploy --non-interactive --token $firebaseCI
