@@ -5,9 +5,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
 	entry: [
-		"babel-polyfill",
-		'./src/main.js',
-		'webpack-hot-middleware/client?reload=true'
+		'./src/main.js'
 	],
 	output: {
 		path: __dirname + '/dist/',
@@ -31,7 +29,7 @@ module.exports = {
 				removeAttributeQuotes: true
 			},
 			template: 'index.html'
-		}),
+		})
 	],
 	module: {
 		loaders: [
